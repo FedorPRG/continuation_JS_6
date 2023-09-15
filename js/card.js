@@ -1,6 +1,6 @@
-async function fetchData() {
+async function fetchData(dataBase) {
   try {
-    const response = await fetch("./js/dataCatalog.json");
+    const response = await fetch(dataBase);
     if (!response.ok) {
       throw new Error("Не удалось получить данные с data JSON");
     }
@@ -42,4 +42,4 @@ async function fetchData() {
     console.error(error);
   }
 }
-fetchData();
+// fetchData("./js/dataIndex.json");
